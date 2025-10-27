@@ -2,34 +2,141 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Bienvenue sur ma page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meryem Lehboub | Portfolio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 2em auto;
-      padding: 1em;
-      line-height: 1.6;
-      background-color: #f9f9f9;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafc;
+      color: #333;
     }
-    h1 { color: #007acc; }
-    h2 { margin-top: 1.5em; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(120deg, #4f46e5, #6d28d9);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4f46e5;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f3f4f6;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #4f46e5;
+      text-decoration: none;
+      margin: 0 5px;
+    }
   </style>
 </head>
 <body>
-  <h1>👋 Bonjour, je suis Meryem</h1>
-  <p>Bienvenue sur ma page GitHub Pages ! J’y partage mes projets de recherche sur les drones, la robotique et ROS 2.</p>
 
-  <h2>🛩️ Mes projets</h2>
-  <ul>
-    <li><a href="https://github.com/meryemlahboub2-hub/quadrotor-control">Contrôle PID/SMC pour quadrotor</a></li>
-    <li><a href="https://github.com/meryemlahboub2-hub/ros2-uav">Planification de trajectoire avec ROS 2 et PX4</a></li>
-  </ul>
+  <header>
+    <h1>Meryem Lehboub</h1>
+    <p>Doctorante en automatique | Passionnée par les drones et le contrôle intelligent</p>
+  </header>
+
+  <section id="projects">
+    <h2>🚀 Mes Projets</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Comparaison PID vs SMC pour un Quadrotor</h3>
+        <p>Étude de performance entre les contrôleurs PID et SMC dans un environnement de simulation Model-in-the-Loop sous MATLAB/Simulink.</p>
+        <a href="https://github.com/meryemlahboub2-hub/quadrotor-control" target="_blank">Voir sur GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Étude de l’alimentation électrique d’un drone</h3>
+        <p>Analyse du courant et de la tension des moteurs et du contrôleur de vol Pixhawk alimenté par une batterie LiPo 3S.</p>
+        <a href="https://github.com/meryemlahboub2-hub/power-supply-study" target="_blank">Voir sur GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Simulation BSTSMC pour Quadrotor</h3>
+        <p>Implémentation d’un contrôleur par mode glissant super-twisting (BSTSMC) et analyse des effets de chaque paramètre.</p>
+        <a href="https://github.com/meryemlahboub2-hub/bstsmc-quadrotor" target="_blank">Voir sur GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📬 Me Contacter</h2>
+    <p style="text-align:center;">Tu peux me contacter sur :</p>
+    <p style="text-align:center;">
+      <a href="mailto:meryem.lahboub@example.com">✉️ Email</a> |
+      <a href="https://www.linkedin.com/in/meryemlahboub" target="_blank">💼 LinkedIn</a> |
+      <a href="https://github.com/meryemlahboub2-hub" target="_blank">🐙 GitHub</a>
+    </p>
+  </section>
 
   <footer>
-    <p>© 2025 Meryem Lahboub</p>
+    © 2025 Meryem Lehboub — Tous droits réservés
   </footer>
+
 </body>
 </html>
